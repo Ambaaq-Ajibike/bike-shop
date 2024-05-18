@@ -1,0 +1,60 @@
+.footer{
+    padding: 100px 50px 60px;
+    background-color: #f3f3f3;
+}
+.upper{
+    display: grid;
+    grid-template-columns: 1.5fr 2.5fr 2.5fr;
+    gap: 20px;
+}
+.news-letter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.news-letter h5{
+    font-size: 17px;
+    letter-spacing:4px;
+    font-weight: 600;
+}
+.news-letter div{
+    width: 110px;
+    height: 2px;
+    background-color: grey;
+    margin: 0 22px;
+
+}
+
+
+.sub-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.sub-form input{
+    border: none;
+    width: 35pc;
+    height: 3pc;
+    border-radius: 35px;
+    padding: 17px;
+    font-size: 18px;
+}
+
+.sub-form button{
+    color: white;
+    background: black;
+    padding: 18px 30px;
+    border-radius: 29px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    margin: 0 0 0 49px;
+}
+.sub-form button:hover{
+    background-color: #534c4c;
+}
