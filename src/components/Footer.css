@@ -58,3 +58,74 @@
 .sub-form button:hover{
     background-color: #534c4c;
 }
+
+.discount{
+    flex: 1;
+}
+.discount h2{
+    font-size: 37px;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+.discount p{
+    font-size: 19px;
+    font-weight: 500;
+}
+.mid-line{
+    width: 97%;
+    height: 1px;
+    background-color: grey;
+    margin: 50px;
+}
+.lower{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: space-around;
+}
+.footer-about{
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 20px;
+}
+.footer-about :nth-child(2){
+    font-weight: 600;
+}
+.footer-about :nth-child(3){
+    font-weight: 200;
+    font-weight: 500;
+    color: #cfcfcf;
+    font-size: 16px;
+}
+.footer-h3-margin{
+    margin-bottom: 30px;
+}
+.footer-p{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 35px;
+}
+.footer-contact{
+    flex: 1;
+}
+.footer-address{
+    flex: 1;
+}
+.footer-social{
+    flex: 1;
+}
+.footer-social div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-social div a{
+    text-decoration: none;
+    color: inherit;
+    transition: 0.5s;
+}
+.footer-social div a:hover{
+    color: red;
+}
