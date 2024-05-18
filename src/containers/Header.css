@@ -33,7 +33,6 @@
     display: none;
     font-size: 58px;
     cursor: pointer;
-    transition: 0.5s;
 }
 .header-links ul{
     list-style: none;
