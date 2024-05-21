@@ -1,0 +1,16 @@
+.check-box-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 20px;
+    color: #bbb8b8;
+}
+.box-left{
+    display: flex;
+    gap: 10px;
+
+}
+.box-left input{
+    width: 35px;
+}

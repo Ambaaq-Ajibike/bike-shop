@@ -1,0 +1,10 @@
+.outer-list{
+    list-style: none;
+    cursor: pointer;
+    margin: 7px;
+}
+.inner-list{
+    list-style: none;
+    padding :  7px 25px;
+    cursor: pointer;
+}
