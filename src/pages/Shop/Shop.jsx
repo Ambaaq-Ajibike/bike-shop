@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Header from "../containers/Header"
-import Footer from "../containers/Footer"
-import BodyHeader  from '../components/BodyHeader';
-import Slider from '../components/Slider';
+import Header from "../../containers/Header"
+import Footer from "../../containers/Footer"
+import BodyHeader  from '../../components/BodyHeader/BodyHeader';
+import Slider from '../../components/Slider/Slider';
 import './Shop.css'
-import elements from './sliderElements';
+import {elements} from '../data';
 let Shop = () =>{
     const [productsCount, setProductsCount] = useState(0);
     const [sortCategory, setSortCategory] = useState("Default");

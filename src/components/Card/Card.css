@@ -1,0 +1,28 @@
+.card{
+    text-align: left;
+    padding: 30px;
+}
+.card img{
+    width: 100%;
+}
+.date{
+    margin: 27px 0;
+    font-size: 17px;
+    color: gainsboro;
+}
+.title{
+    font-size: 21px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.description{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.read{
+    text-decoration: none;
+    color: rgb(247, 50, 50);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}

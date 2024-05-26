@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './Slider.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import SliderDrop from './SliderDrop';
-import SliderCheckBox from './SliderCheckBox';
+import SliderDrop from '../SliderDrop/SliderDrop';
+import SliderCheckBox from '../CheckBox/SliderCheckBox';
 let Slider = ({elements,}) => {
     const [chevronState, setChevronState] = useState(faChevronRight);
     const [slideElementClass, setSlideElementClass] = useState("hide");
