@@ -23,7 +23,10 @@ import './Contact.css'
         <div className="contact-last-separator"></div>
             <div className="contact-form-header">
                 <h1>Get In Touch With Us</h1>
+                <div className="descr">
                 <p>Introducing a fully integrated, electric-assist mountain bike that takes the Altitude’s legendary handling and ride quality</p>
+                </div>
+               
             </div>
             <form className="contact-form">
                 <div className="form-upper">

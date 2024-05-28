@@ -1,7 +1,7 @@
 .contact-first{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding: 48px;
 }
 .contact-last{
@@ -23,6 +23,9 @@
     letter-spacing: -2px;
     margin: 20px;
 }
+.descr{
+    max-width: 695px;
+}
 .contact-form-header p{
     font-size: 17px;
     font-weight: 500;
@@ -30,7 +33,6 @@
 }
 .contact-form-header{
     text-align: center;
-    width: 45%;
 }
 .contact-form{
     width: 100%;
@@ -42,16 +44,39 @@
 .form-upper{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 60px;
 }
 .form-upper div{
     flex: 1;
 }
 
 .form-input {
-    width: 83%;
-    border-bottom: 2px solid !important;
+    width: 100%;
+    border-bottom: 2px solid gainsboro !important;
     border: none;
     padding: 20px 5px;
     font-size: 20px;
+}
+.form-lower{
+    margin: 89px 0;
+    margin-top: 100px;
+}
+.form-btn button{
+    border: none;
+    padding: 16px 30px;
+    background-color: black;
+    color: gainsboro;
+    font-size: 18px;
+    border-radius: 34px;
+    font-weight: 700;
+    width: 13pc;
+    cursor: pointer;
+}
+@media screen and  (max-width: 850px)  {
+    .form-upper, .contact-first{
+        flex-direction: column;
+    }
+    .contact-first{
+        gap: 3pc;
+    }
 }
