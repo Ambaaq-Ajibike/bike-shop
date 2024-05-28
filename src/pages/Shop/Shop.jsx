@@ -13,7 +13,6 @@ let Shop = () =>{
     }
     return (
         <>        
-   <Header/>
    <BodyHeader title='The Shop' page='Products' color='red' />
    <div className='shop-container'>
    <div className='shop-left'>
@@ -36,8 +35,6 @@ let Shop = () =>{
         </div>
    </div>
    </div>
- 
-      <Footer/>
         </>
     )
 }

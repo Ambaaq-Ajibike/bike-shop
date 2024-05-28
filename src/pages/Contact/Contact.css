@@ -1,0 +1,57 @@
+.contact-first{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px;
+}
+.contact-last{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5pc 3pc;
+    text-align: center;
+}
+.contact-last-separator{
+    width: 8pc;
+    height: 1px;
+    background-color: black;
+    margin: 22px;
+}
+.contact-form-header h1{
+    font-size: 45px;
+    letter-spacing: -2px;
+    margin: 20px;
+}
+.contact-form-header p{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 35px;
+}
+.contact-form-header{
+    text-align: center;
+    width: 45%;
+}
+.contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5pc 2pc;
+}
+.form-upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-upper div{
+    flex: 1;
+}
+
+.form-input {
+    width: 83%;
+    border-bottom: 2px solid !important;
+    border: none;
+    padding: 20px 5px;
+    font-size: 20px;
+}

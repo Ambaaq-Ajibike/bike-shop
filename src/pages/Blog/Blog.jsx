@@ -8,13 +8,11 @@ import { Card } from '../../components/Card/Card';
 let Blog = () =>{
 
     return (
-        <>        
-   <Header/>
+        <>
    <BodyHeader title='Blog' page='Blog' color='red' />
    <div className='blog-container'>
             {blogs.map(x => <Card data={x}/>)}
-      </div> 
-      <Footer/>
+      </div>
         </>
     )
 }

@@ -1,0 +1,16 @@
+.info-card{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+.icon{
+    font-size: 45px;
+}
+.info-details p{    
+    line-height: 29px;
+    font-weight: 500;
+    font-size: 19px;
+}
+.info-details h3{
+    font-size: 22px;
+}
