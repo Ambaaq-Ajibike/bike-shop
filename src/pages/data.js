@@ -113,7 +113,7 @@ export const blogs = [
         description: 'When, while the lovely valley teems with vapour around me, a ...'
     },
     {
-        id: 6,
+        id: 7,
         date: "May 18, 2019",
         title: 'Develop Your Startup Idea',
         description: 'When, while the lovely valley teems with vapour around me, a ...'
@@ -131,7 +131,7 @@ export const blogs = [
         description: 'When, while the lovely valley teems with vapour around me, a ...'
     },
     {
-        id: 7,
+        id: 6,
         date: "May 18, 2019",
         title: 'Building the Google Photos Web UI Mauris vehicula efficitur mi, vel',
         description: 'When, while the lovely valley teems with vapour around me, a ...'
@@ -141,5 +141,90 @@ export const blogs = [
         date: "May 12, 2019",
         title: 'The Boat Scudded Thus Northward During the Whole Day',
         description: 'When, while the lovely valley teems with vapour around me, a ...'
+    },
+]
+export const products = [
+    {
+        name: "Rocky Mountain",
+        image : "/assets/images/shop/shop-1.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "2,525",
+        category: "Popularity"
+    },
+    {
+        name: "Giant",
+        image : "/assets/images/shop/shop-2.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "545",
+        category: "Low price"
+    },
+    {
+        name: "Pearl Izumi",
+        image : "/assets/images/shop/shop-3.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "585",
+        category: "Newness"
+    }, {
+        name: "Rocky Mountain",
+        image : "/assets/images/shop/shop-1.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "2,525",
+        category: "Popularity"
+    },
+    {
+        name: "Giant",
+        image : "/assets/images/shop/shop-2.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "545",
+        category: "Popularity"
+    },
+    {
+        name: "Pearl Izumi",
+        image : "/assets/images/shop/shop-3.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "585",
+        category: "Rating"
+    },
+    
+    {
+        name: "Cervelo",
+        image : "/assets/images/shop/shop-4.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "585",
+        category: "Popularity"
+    },
+    {
+        name: "Gore wear C7",
+        image : "/assets/images/shop/shop-5.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "585",
+        category: "Rating"
+    },
+    {
+        name: "Rocky Mountain",
+        image : "/assets/images/shop/shop-6.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "585",
+        category: "Highness"
+    },
+    {
+        name: "Cervelo",
+        image : "/assets/images/shop/shop-4.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "585",
+        category: "Rating"
+    },
+    {
+        name: "Gore wear C7",
+        image : "/assets/images/shop/shop-5.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "585"
+    },
+    {
+        name: "Rocky Mountain",
+        image : "/assets/images/shop/shop-6.png",
+        "description": "Ride more, further, faster. Th...",
+        price: "585",
+        category: "Newness"
     },
 ]

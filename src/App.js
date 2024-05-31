@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='app-des'>
      <Header/>
-    <Blog/>
+    <Shop/>
       <Footer/>
     
     </div>     

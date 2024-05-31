@@ -9,9 +9,24 @@ let Blog = () =>{
 
     return (
         <>
-   <BodyHeader title='Blog' page='Blog' color='red' />
+   <BodyHeader title='Blog' page='Blog' color='black' />
    <div className='blog-container'>
-            {blogs.map(x => <Card data={x}/>)}
+        <div>
+            <Card data={blogs[0]}/>
+            <Card data={blogs[1]}/>
+        </div>
+        <div>
+            <Card data={blogs[2]}/>
+            <Card data={blogs[3]}/>
+        </div>
+        <div>
+            <Card data={blogs[4]}/>
+            <Card data={blogs[5]}/>
+        </div>
+        <div>
+            <Card data={blogs[6]}/>
+            <Card data={blogs[7]}/>
+        </div>
       </div>
         </>
     )

@@ -3,13 +3,20 @@ import Header from "../../containers/Header"
 import Footer from "../../containers/Footer"
 import BodyHeader  from '../../components/BodyHeader/BodyHeader';
 import Slider from '../../components/Slider/Slider';
+import { ShopCard } from '../../components/ShopCard/ShopCard';
 import './Shop.css'
-import {elements} from '../data';
+import {elements, products} from '../data';
 let Shop = () =>{
-    const [productsCount, setProductsCount] = useState(0);
+    const [productsCount, setProductsCount] = useState(products.length);
+    const [displaySort, setDisplaySort] = useState("none");
     const [sortCategory, setSortCategory] = useState("Default");
+    const [productList, setProductList] = useState([...products]);
     let handleCategorySelect =(category)=>{
         setSortCategory(category);
+        let list = products.filter(x => x.category === category);
+        setProductList(list);
+        setProductsCount(list.length)
+        setDisplaySort(displaySort === "block" ? "none" : "block");
     }
     return (
         <>        
@@ -21,10 +28,10 @@ let Shop = () =>{
    </div>
    <div className='shop-right'>
    <div className='shop-detail'>
-            <p>{productsCount} Products Found</p>
+            <p className='product-number'> <span style={{color: 'red'}}> {productsCount}</span> Products Found</p>
             <div className='sort'>
-                <p><span>Sort By:</span>{sortCategory}</p>
-                <ul>
+                <p onClick={() => setDisplaySort(displaySort === "block" ? "none" : "block")}><span style={{color: "gainsboro"}}>Sort By:</span>      {sortCategory}</p>   
+                <ul className='sort-list' style={{display: displaySort}}>
                     <li onClick={() => handleCategorySelect("Popularity")}>Popularity</li>
                     <li onClick={() => handleCategorySelect("Rating")}>Rating</li>
                     <li onClick={() => handleCategorySelect("Newness")}>Newness</li>
@@ -32,6 +39,9 @@ let Shop = () =>{
                     <li onClick={() => handleCategorySelect("High price")}>High price</li>
                 </ul>
             </div>
+        </div>
+        <div className='shop-products'>
+        {productList.map(product => <ShopCard data={product}/>)}
         </div>
    </div>
    </div>

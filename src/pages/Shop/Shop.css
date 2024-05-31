@@ -1,5 +1,54 @@
 .shop-container{
     padding: 0 50px;
     display: flex;
+    gap: 8pc;
+}
+.shop-right{
+    flex: 1;
+}
+.shop-detail{
+    display: flex;
     justify-content: space-between;
+}
+.product-number{
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.sort {
+    font-size: 18px !important;
+    font-weight: 600;
+    line-height: 35px;
+    position: relative;
+    z-index: 1; /* Ensure parent has a lower z-index */
+}
+
+.sort p {
+    cursor: pointer;
+    margin: 0 25px;
+    position: relative;
+    z-index: 1; /* Ensure <p> has a lower z-index */
+}
+
+.sort-list {
+    box-shadow: -1px 8px 24px 0px rgba(66, 68, 90, 1);
+    list-style: none;
+    padding: 20px 50px;
+    line-height: 3pc;
+    position: absolute;
+    top: -8px; /* Adjust this to position below the <p> tag */
+    left: -10px;
+    z-index: 10; /* Ensure .sort-list has a higher z-index */
+    width: 13pc;
+    background: white; /* Ensure it has a background to cover the content below */
+}
+
+.sort-list li {
+    cursor: pointer;
+}
+.shop-products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px 20px;
+    gap: 35px;
 }

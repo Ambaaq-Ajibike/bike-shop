@@ -1,0 +1,28 @@
+.shop-card-container{
+    padding: 20px;
+    line-height: 25px;
+    transition: box-shadow 2s, transform 2s;
+    height: 27pc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.shop-card-container:hover{
+    box-shadow: -3px 0px 41px -7px rgba(68, 68, 68, 0.75);
+    transform: scale(1.05);
+}
+.product-detail h5{
+    font-size: 18px;
+    margin: 17px 0;
+}
+.product-detail p{
+    font-size: 18px;
+    
+}
+.add-to-card{
+    color: red;
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: 2s;
+}
