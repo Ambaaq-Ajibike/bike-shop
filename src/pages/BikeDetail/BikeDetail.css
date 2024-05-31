@@ -1,0 +1,112 @@
+.bike-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 7pc;
+    padding-bottom: 13pc;
+    
+}
+.primary-detail{
+    margin: 36px 0;
+}
+.primary-detail h1{
+    margin-bottom: 2pc;
+    font-weight: 800;
+    font-size: 40px;
+}
+.primary-detail h3{
+    font-size: 35px;
+    margin: 20px 0;
+}
+.primary-detail p{
+    font-size: 18px;
+    line-height: 30px;
+    width: 90%;
+    font-weight: 500;
+}
+.bike-info{
+    flex: 1;
+    
+    padding-right: 10pc; 
+}
+.bike-image{
+    flex: 1;
+}
+.primary-inner-conts{
+    margin: 36px 0;
+}
+.primary-section-title{
+    font-size: 22px;
+    font-weight: 700;
+}
+.bike-brands{
+    width: 35%;
+}
+.bike-brands li{
+    cursor: pointer;
+    color: gainsboro;
+    font-size: 17px;
+    font-weight: 600;
+}
+.bold-brand-text{
+    font-weight: 700;
+    border: 1px solid black;
+    color: black !important;
+}
+.primary-list-flex{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+.bike-sizes li{
+    border: 2px solid;
+    width: 49px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.bike-sizes li:hover, .size-bg{
+    background-color: black;
+    color: white;
+}
+.size-clear{
+    width: 20px;
+    height: 30px;
+}
+.bike-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quantity{
+    border: 2px solid gainsboro;
+    padding: 5px 18px;
+    border-radius: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10pc;
+}
+.quantity input{
+    width: 50px;
+    font-size: 27px;
+    padding: 5px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+.bike-actions button{
+    border: none;
+    padding: 20px 50px; 
+    background-color: #2b2828;
+    color: gainsboro;
+    font-size: 18px;
+    border-radius: 31px;
+    cursor: pointer;
+}
+.icon-font{
+    font-size: 24px;
+}
