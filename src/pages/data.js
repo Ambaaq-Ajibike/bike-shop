@@ -146,41 +146,41 @@ export const blogs = [
 export const products = [
     {
         name: "Rocky Mountain",
-        image : "/assets/images/shop/shop-1.png",
+        image : "shop-1.png",
         "description": "Ride more, further, faster. Th...",
         price: "2,525",
         category: "Popularity"
     },
     {
         name: "Giant",
-        image : "/assets/images/shop/shop-2.png",
+        image : "shop-2.png",
         "description": "Ride more, further, faster. Th...",
         price: "545",
         category: "Low price"
     },
     {
         name: "Pearl Izumi",
-        image : "/assets/images/shop/shop-3.png",
+        image : "shop-3.png",
         "description": "Ride more, further, faster. Th...",
         price: "585",
         category: "Newness"
     }, {
         name: "Rocky Mountain",
-        image : "/assets/images/shop/shop-1.png",
+        image : "shop-1.png",
         "description": "Ride more, further, faster. Th...",
         price: "2,525",
         category: "Popularity"
     },
     {
         name: "Giant",
-        image : "/assets/images/shop/shop-2.png",
+        image : "shop-2.png",
         "description": "Ride more, further, faster. Th...",
         price: "545",
         category: "Popularity"
     },
     {
         name: "Pearl Izumi",
-        image : "/assets/images/shop/shop-3.png",
+        image : "shop-3.png",
         "description": "Ride more, further, faster. Th...",
         price: "585",
         category: "Rating"
@@ -188,41 +188,41 @@ export const products = [
     
     {
         name: "Cervelo",
-        image : "/assets/images/shop/shop-4.png",
+        image : "shop-4.png",
         "description": "Ride more, further, faster. Th...",
         price: "585",
         category: "Popularity"
     },
     {
         name: "Gore wear C7",
-        image : "/assets/images/shop/shop-5.png",
+        image : "shop-5.png",
         "description": "Ride more, further, faster. Th...",
         price: "585",
         category: "Rating"
     },
     {
         name: "Rocky Mountain",
-        image : "/assets/images/shop/shop-6.png",
+        image : "shop-6.png",
         "description": "Ride more, further, faster. Th...",
         price: "585",
         category: "Highness"
     },
     {
         name: "Cervelo",
-        image : "/assets/images/shop/shop-4.png",
+        image : "shop-4.png",
         "description": "Ride more, further, faster. Th...",
         price: "585",
         category: "Rating"
     },
     {
         name: "Gore wear C7",
-        image : "/assets/images/shop/shop-5.png",
+        image : "shop-5.png",
         "description": "Ride more, further, faster. Th...",
         price: "585"
     },
     {
         name: "Rocky Mountain",
-        image : "/assets/images/shop/shop-6.png",
+        image : "shop-6.png",
         "description": "Ride more, further, faster. Th...",
         price: "585",
         category: "Newness"

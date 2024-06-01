@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from "../../containers/Header"
 import Footer from "../../containers/Footer"
 import BodyHeader  from '../../components/BodyHeader/BodyHeader';
 import Slider from '../../components/Slider/Slider';
 import { ShopCard } from '../../components/ShopCard/ShopCard';
 import './Shop.css'
+import {db, auth, storage} from "../../config/firebase"
+import { addDoc, collection } from 'firebase/firestore';
 import {elements, products} from '../data';
 let Shop = () =>{
     const [productsCount, setProductsCount] = useState(products.length);
     const [displaySort, setDisplaySort] = useState("none");
     const [sortCategory, setSortCategory] = useState("Default");
     const [productList, setProductList] = useState([...products]);
+    const bikeCollection = collection(db, "bikes");
     let handleCategorySelect =(category)=>{
         setSortCategory(category);
         let list = products.filter(x => x.category === category);
@@ -18,6 +21,14 @@ let Shop = () =>{
         setProductsCount(list.length)
         setDisplaySort(displaySort === "block" ? "none" : "block");
     }
+    const addBikes = async () =>{
+        products.forEach(async pr => {
+            await addDoc(bikeCollection, pr);
+        })
+    }
+    useEffect(() => {
+        addBikes();
+    }, [])
     return (
         <>        
    <BodyHeader title='The Shop' page='Products' color='red' />

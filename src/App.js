@@ -10,7 +10,8 @@ function App() {
   return (
     <div className='app-des'>
      <Header/>
-    <BikeDetail data={products[0]}/>
+    {/* <BikeDetail data={products[0]}/> */}
+    <Shop/>
       <Footer/>
     
     </div>     
