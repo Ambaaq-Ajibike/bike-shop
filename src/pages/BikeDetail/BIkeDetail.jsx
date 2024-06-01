@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BodyHeader  from '../../components/BodyHeader/BodyHeader';
 import './BikeDetail.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faShare, faHeart } from '@fortawesome/free-solid-svg-icons';
-let BikeDetail = ({data}) =>{
+import {db, } from "../../config/firebase"
+import {  collection, getDoc } from 'firebase/firestore'; 
+import { useParams } from 'react-router';
+let BikeDetail = () =>{
+    const params= useParams()
+    const [data, setData] = useState({});
+    const docRef = collection(db, "bikes", params.id);
+    const getBike = async () =>{
+        
+const snapshot = await getDoc(docRef);
+console.log(snapshot.data())
+    }
+    useEffect(() => {
+        getBike();
+    }, [])
     const [brand, setBrand] = useState('');
     const [size, setSize] = useState('');
     const [quantity, setQuantity] = useState(1);

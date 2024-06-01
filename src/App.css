@@ -44,3 +44,7 @@
     transform: rotate(360deg);
   }
 }
+.remove-anchor-default{
+  text-decoration: none;
+  color: black;
+}

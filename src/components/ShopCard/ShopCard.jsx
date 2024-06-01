@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import './ShopCard.css'
+import {  Link } from "react-router-dom";
 export  const ShopCard = ({data}) =>{
     const [showCart, setShowCart] = useState(false);
     return (
-       <div className='shop-card-container' onMouseEnter={() => setShowCart(true)}
+     <Link className='remove-anchor-default' to={`/bike/${data.id}`}>
+<div className='shop-card-container' onMouseEnter={() => setShowCart(true)}
        onMouseLeave={() => setShowCart(false)}>
        <div>
              <img src={data.image} alt={data.name} style={{height: "13pc"}} />
@@ -17,5 +19,7 @@ export  const ShopCard = ({data}) =>{
             <h2>${data.price}</h2>
        </div>
        </div>
+     </Link>
+      
     )
 }

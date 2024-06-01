@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faBagShopping, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import {  Link } from "react-router-dom";
 let Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     let handleClick = () =>{
@@ -13,10 +14,10 @@ let Header = () => {
         <FontAwesomeIcon style={{fontSize: 50, cursor: "pointer"}} onClick={handleClick} icon={faCircleXmark} />
         <ul>
                 
-                <li>Home</li>
-                    <li>Bike</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                <li> <Link className="remove-anchor-default" to="/">Home</Link></li>
+                    <li><Link className="remove-anchor-default" to="/shop">Bike</Link></li>
+                    <li><Link className="remove-anchor-default" to="/blogs">Blog</Link></li>
+                    <li><Link className="remove-anchor-default" to="/contact">Contact</Link></li>
                 </ul>
         </div>
             <div className="big-screen">
@@ -33,10 +34,10 @@ let Header = () => {
           &#9776;
         </div>
             <ul>
-                    <li>Home</li>
-                    <li>Bike</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+            <li> <Link className="remove-anchor-default" to="/">Home</Link></li>
+                    <li><Link className="remove-anchor-default" to="/shop">Bike</Link></li>
+                    <li><Link className="remove-anchor-default"  to="/blogs">Blog</Link></li>
+                    <li><Link className="remove-anchor-default" to="/contact">Contact</Link></li>
                 </ul>
                 <div className="cart">
                 <span>0</span>

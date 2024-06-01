@@ -1,7 +1,7 @@
 import React from "react";
 import CheckBox from "./CheckBox";
 let SliderCheckBox = ({elements}) => {
-    console.log(elements, "elements");
+
     return (
         <>
         {elements.map(x => 

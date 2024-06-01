@@ -56,6 +56,7 @@
     border: none;
     padding: 20px 5px;
     font-size: 20px;
+    outline: none;
 }
 .form-lower{
     margin: 89px 0;
