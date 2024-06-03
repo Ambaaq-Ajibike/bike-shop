@@ -18,7 +18,7 @@ function App() {
         <Route path='/blogs' element={<Blog/>} />
         <Route path='/shop' element={<Shop/>} />
         <Route path='/contact' element={<Contact/>} />
-        <Route path="/bike/:id" element={<BikeDetail/>} />
+        <Route path="/bike/:id" element={<BikeDetail data={products[0]}/>} />
       </Routes>
       <Footer/>
     </BrowserRouter>

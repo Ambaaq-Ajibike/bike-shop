@@ -21,12 +21,11 @@
 .primary-detail p{
     font-size: 18px;
     line-height: 30px;
-    width: 90%;
+    width: 100%;
     font-weight: 500;
 }
 .bike-info{
-    flex: 1;
-    
+    flex: 1;    
     padding-right: 10pc; 
 }
 .bike-image{
@@ -100,13 +99,48 @@
 }
 .bike-actions button{
     border: none;
-    padding: 20px 50px; 
-    background-color: #2b2828;
-    color: gainsboro;
+    padding: 20px 50px;
+    background-color: black;
+    color: white;
     font-size: 18px;
     border-radius: 31px;
+    font-weight: 700;
     cursor: pointer;
 }
 .icon-font{
     font-size: 24px;
+}
+.related-products{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 50px;
+}
+.relative-product-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.relative-product-header h1{
+    font-size: 43px;
+    letter-spacing: -2px;
+}
+.related-product-line{
+    width: 7pc;
+    height: 2px;
+    background-color: black;
+}
+@media screen and  (max-width: 990px)  {
+    .related-products, .bike-detail{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .bike-info{
+        padding-right: 0; 
+    }
+    .bike-detail{
+        padding: 0 2pc;
+        padding-bottom: 13pc;
+        
+    }
 }

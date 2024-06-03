@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faBagShopping, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import {  Link } from "react-router-dom";
 let Header = () => {
+    const[itemsInCart, setItemsInCart] = useState(0);
+    useEffect(() => {
+        const cartItems = localStorage.getItem("cartItems");
+
+        if(cartItems){
+            let items = JSON.parse(cartItems);
+            setItemsInCart(items.reduce((sum, item) => sum + item.quantity, 0));
+        }
+    }, [])
     const [isOpen, setIsOpen] = useState(false);
     let handleClick = () =>{
         setIsOpen(!isOpen);
@@ -40,7 +49,7 @@ let Header = () => {
                     <li><Link className="remove-anchor-default" to="/contact">Contact</Link></li>
                 </ul>
                 <div className="cart">
-                <span>0</span>
+                <span>{itemsInCart}</span>
                     <FontAwesomeIcon icon={faBagShopping} />
                 </div>
                 

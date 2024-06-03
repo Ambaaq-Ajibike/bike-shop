@@ -4,23 +4,50 @@ import './BikeDetail.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faShare, faHeart } from '@fortawesome/free-solid-svg-icons';
 import {db, } from "../../config/firebase"
-import {  collection, getDoc } from 'firebase/firestore'; 
+import {  collection, getDoc, doc } from 'firebase/firestore'; 
 import { useParams } from 'react-router';
+import RelatedProducts from '../../components/RelatedProducts/RelatedProducts';
 let BikeDetail = () =>{
+    const [brand, setBrand] = useState('');
+    const [size, setSize] = useState('');
+    const [quantity, setQuantity] = useState(1);
     const params= useParams()
     const [data, setData] = useState({});
-    const docRef = collection(db, "bikes", params.id);
     const getBike = async () =>{
-        
-const snapshot = await getDoc(docRef);
-console.log(snapshot.data())
+        const docRef = doc(collection(db, "bikes"), params.id);
+        const snapshot = await getDoc(docRef);
+        if (snapshot.exists()) {
+            setData(snapshot.data());
+        } else {
+            console.log("No such document!");
+        }
     }
     useEffect(() => {
         getBike();
     }, [])
-    const [brand, setBrand] = useState('');
-    const [size, setSize] = useState('');
-    const [quantity, setQuantity] = useState(1);
+const addToCart = () =>{
+    if(brand == '' || size == '')
+        {
+            alert("Please select some product options before adding this product to your cart.")
+        }
+        else{
+            const newItem = {
+                name: data.name,
+                price: data.price,
+                quantity: quantity,
+                size: size,
+                image: data.image,
+                brand: brand
+            }
+            const cartItems = localStorage.getItem("cartItems");
+            let items = [];
+            if(cartItems){
+                items = JSON.parse(cartItems);
+            }            
+            items.push(newItem);
+            localStorage.setItem("cartItems", JSON.stringify(items));
+        }
+}
   
     return (
         <>
@@ -28,7 +55,7 @@ console.log(snapshot.data())
   <div className="bike-detail-container">
         <div className='bike-detail'>
             <div className='bike-image'>
-                <img style={{width: '90%'}} src= {data.image} alt='bike' />
+                <img style={{width: '90%'}} src={`https://firebasestorage.googleapis.com/v0/b/bike-shop-e4721.appspot.com/o/${data.image}?alt=media&token=0d86f75b-80b8-4ebc-bc54-9a2d76c3e69f`} alt='bike' />
             </div>
             <div className='bike-info'>
             <div className='primary-detail'>
@@ -67,14 +94,24 @@ console.log(snapshot.data())
                     <input  value={quantity}/>
                     <FontAwesomeIcon style={{cursor: "pointer"}} icon={faPlus} onClick={() => setQuantity(quantity+1 )} />
                 </div>
-                <button>ADD TO CART</button>
+                <button style={{cursor: brand == '' || size == '' ? "not-allowed" : 'pointer'}} onClick={addToCart}>ADD TO CART</button>
                     <FontAwesomeIcon className='icon-font' icon={faHeart} />
                     <FontAwesomeIcon className='icon-font' icon={faShare} />
             </div>
             </div>
         </div>
         <div></div>
-        <div></div>
+        <div className='last-div'>
+        <div className='relative-product-header'>
+        <div className='related-product-line'>          
+        </div>
+        <h1>Related Products</h1>  
+        </div>             
+        <div className='related-products'>
+        
+            <RelatedProducts/>
+        </div>
+        </div>
   </div>
         </>
     )
