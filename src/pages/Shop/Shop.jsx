@@ -26,7 +26,6 @@ let Shop = () =>{
         const bikesResponse = await getDocs(bikeCollection, 'bikes');
         const bikeList = bikesResponse.docs.map(x => ({ ...x.data(),
             id: x.id,}));
-        console.log(bikeList)
         setBikes(bikeList);
         setProductList(bikeList)
         setProductsCount(bikeList.length);

@@ -2,7 +2,8 @@
    
     padding: 0 40px;
     border-bottom: 3px solid #f3f3f3;
-    
+    position: relative;
+    z-index: 1;
 }
 .big-screen{
     display: flex;
@@ -96,6 +97,45 @@
 }
 .smaller-screen ul li{
     cursor: pointer;
+}
+.total-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.cart-other-details div h5{
+    font-size: 17px;
+}
+.cart-item-action{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-btn{
+    border: none;
+    padding: 10px;
+    border-radius: 34px;
+    font-size: 15px;
+    font-weight: 800;
+    width: 12pc;
+    cursor: pointer;
+}
+.cart-btn:nth-child(1){
+    color: black;
+    background-color: gainsboro;
+}
+.cart-btn:nth-child(2){
+    color: white;
+    background-color: black;
+}
+
+.cart-summary{
+    width: 28%;
+    padding: 25px;
+    box-shadow: -3px 0px 41px -7px rgba(68, 68, 68, 0.75);
+    position: absolute;
+    right: 20px;
+    z-index: 1000;
 }
 @media screen and  (max-width: 850px)  {
     .menu-button{

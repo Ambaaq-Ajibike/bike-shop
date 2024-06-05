@@ -7,6 +7,7 @@ import Header from './containers/Header';
 import BikeDetail from './pages/BikeDetail/BIkeDetail';
 import { products } from './pages/data';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from './pages/Landing/Landing';
 function App() {
   return (
     <div className='app-des'>
@@ -14,7 +15,7 @@ function App() {
     <BrowserRouter>
     <Header/>
       <Routes>
-        <Route path='/' />
+        <Route path='/'  element={<Landing/>}/>
         <Route path='/blogs' element={<Blog/>} />
         <Route path='/shop' element={<Shop/>} />
         <Route path='/contact' element={<Contact/>} />

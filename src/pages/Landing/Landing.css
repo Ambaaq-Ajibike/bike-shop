@@ -1,0 +1,92 @@
+.landing-first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top: 7pc;
+}
+.landing-intro{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+}
+.landing-image{
+    box-shadow: 9px 19px 38px 2px rgba(145,134,134,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 55%;
+}
+.landing-image img{
+    width: 97%;
+}
+.landing-intro h1{
+    font-size: 10pc;
+    color: #ed0505;
+    font-style: italic;
+}
+.landing-intro h2{
+    font-size: 60px;
+    width: 28pc;
+}
+.landing-intro p{
+    width: 27pc;
+    font-weight: 500;
+}
+.landing-view{
+    font-size: 20px;
+    margin-top: 6pc;
+    letter-spacing: 6px;
+}
+.landing-view div{
+    background-color: black;
+    width: 6pc;
+    height: 1px;
+    margin-bottom: 9px;
+}
+.landing-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 48px;
+    margin: 5pc 0;
+}
+.arrival-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.arrival-categories{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.arrival-categories li{
+    text-transform: uppercase;
+    cursor: pointer;
+    color: gainsboro;
+}
+.arrival-title h1{
+    font-size: 44px;
+    letter-spacing: -3px;
+    font-weight: 800;
+    margin: 12px;
+}
+.header-line{
+    background-color: black;
+    width: 6pc;
+    height: 1px;
+}
+.arrival-collections{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 30px;
+}

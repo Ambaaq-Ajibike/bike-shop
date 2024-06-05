@@ -4,7 +4,7 @@ import './BikeDetail.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faShare, faHeart } from '@fortawesome/free-solid-svg-icons';
 import {db, } from "../../config/firebase"
-import {  collection, getDoc, doc } from 'firebase/firestore'; 
+import {  collection, getDoc, doc, addDoc } from 'firebase/firestore'; 
 import { useParams } from 'react-router';
 import RelatedProducts from '../../components/RelatedProducts/RelatedProducts';
 let BikeDetail = () =>{
@@ -13,6 +13,7 @@ let BikeDetail = () =>{
     const [quantity, setQuantity] = useState(1);
     const params= useParams()
     const [data, setData] = useState({});
+    const [addToCartClick, setAddToCartClick] = useState(false);
     const getBike = async () =>{
         const docRef = doc(collection(db, "bikes"), params.id);
         const snapshot = await getDoc(docRef);
@@ -24,9 +25,14 @@ let BikeDetail = () =>{
     }
     useEffect(() => {
         getBike();
-    }, [])
-const addToCart = () =>{
-    if(brand == '' || size == '')
+    }, []);
+
+const addToCart = async () =>{
+    if(!addToCartClick){
+        return;
+    }
+    setAddToCartClick(false);
+    if(brand === '' || size === '')
         {
             alert("Please select some product options before adding this product to your cart.")
         }
@@ -39,16 +45,15 @@ const addToCart = () =>{
                 image: data.image,
                 brand: brand
             }
-            const cartItems = localStorage.getItem("cartItems");
-            let items = [];
-            if(cartItems){
-                items = JSON.parse(cartItems);
-            }            
-            items.push(newItem);
-            localStorage.setItem("cartItems", JSON.stringify(items));
+          const cartRef = collection(db, "cart");
+           await addDoc(cartRef, newItem);
+           window.location.reload()
         }
 }
-  
+
+useEffect(() =>{
+    addToCart();    
+}, [addToCartClick])
     return (
         <>
    <BodyHeader title='The Shop' page='Products > Bike Giant' color='black' />
@@ -94,7 +99,7 @@ const addToCart = () =>{
                     <input  value={quantity}/>
                     <FontAwesomeIcon style={{cursor: "pointer"}} icon={faPlus} onClick={() => setQuantity(quantity+1 )} />
                 </div>
-                <button style={{cursor: brand == '' || size == '' ? "not-allowed" : 'pointer'}} onClick={addToCart}>ADD TO CART</button>
+                <button style={{cursor: brand == '' || size == '' ? "not-allowed" : 'pointer'}} onClick={() => setAddToCartClick(true)}>ADD TO CART</button>
                     <FontAwesomeIcon className='icon-font' icon={faHeart} />
                     <FontAwesomeIcon className='icon-font' icon={faShare} />
             </div>
