@@ -52,3 +52,19 @@
     margin: 50px 20px;
     gap: 35px;
 }
+
+@media screen and (max-width: 1300px) {
+    .shop-products{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .shop-container{
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width: 900px) {
+    .shop-products{
+        grid-template-columns: 1fr;
+    }
+}

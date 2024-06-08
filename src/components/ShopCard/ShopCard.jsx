@@ -8,7 +8,7 @@ export  const ShopCard = ({data}) =>{
 <div className='shop-card-container' onMouseEnter={() => setShowCart(true)}
        onMouseLeave={() => setShowCart(false)}>
        <div>
-             <img src={data.image} alt={data.name} style={{height: "13pc"}} />
+             <img  className='card-image' src={data.image} alt={data.name}  />
        </div>
        <div>
        <div className='product-detail' style={{display: (showCart) ? "none" : "block"}}>
