@@ -7,7 +7,7 @@ export  const Card = ({data}) =>{
             <p className='date'>{data.date}</p>
             <h3 className='title'>{data.title}</h3>
             <p className='description'>{data.description}</p>
-            <a href='#' className='read'>Read more</a>
+            <p className='read'>Read more</p>
         </div>
     )
 }
