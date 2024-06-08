@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Header from "../../containers/Header"
-import Footer from "../../containers/Footer"
 import BodyHeader  from '../../components/BodyHeader/BodyHeader';
 import Slider from '../../components/Slider/Slider';
 import { ShopCard } from '../../components/ShopCard/ShopCard';

@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import Header from "../../containers/Header"
-import Footer from "../../containers/Footer"
+import React from 'react';
 import BodyHeader  from '../../components/BodyHeader/BodyHeader';
 import './Blog.css'
 import { blogs } from '../data';

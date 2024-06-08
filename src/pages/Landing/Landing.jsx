@@ -1,4 +1,4 @@
-import { faCalendar, faHeadphones, faMouse, faTruckFast, faWallet } from "@fortawesome/free-solid-svg-icons";
+import { faCalendar, faHeadphones,  faTruckFast, faWallet } from "@fortawesome/free-solid-svg-icons";
 import InfoCard from "../../components/InfoCard/InfoCard";
 import "./Landing.css"
 import {db, } from "../../config/firebase"

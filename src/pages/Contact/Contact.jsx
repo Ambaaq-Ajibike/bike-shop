@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "../../containers/Header"
-import Footer from "../../containers/Footer"
 import BodyHeader  from '../../components/BodyHeader/BodyHeader';
 import InfoCard from "../../components/InfoCard/InfoCard";
 import { faMobile, faEnvelope, faClock, faLocationDot } from '@fortawesome/free-solid-svg-icons';
