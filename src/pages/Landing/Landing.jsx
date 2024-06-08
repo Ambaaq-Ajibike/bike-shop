@@ -66,8 +66,7 @@ const Landing = () =>{
                         <li style={{color: sortCategory === "Popularity" ? "black" : "gainsboro"}}  onClick={() => handleCategorySelect("Popularity")}>Popularity</li>
                     <li style={{color: sortCategory === "Rating" ? "black" : "gainsboro"}}  onClick={() => handleCategorySelect("Rating")}>Rating</li>
                     <li style={{color: sortCategory === "Newness" ? "black" : "gainsboro"}}  onClick={() => handleCategorySelect("Newness")}>Newness</li>
-                    <li style={{color: sortCategory === "All" ? "black" : "gainsboro"}}  onClick={() => handleCategorySelect("Low price")}>Low price</li>
-                    <li style={{color: sortCategory === "High price" ? "black" : "gainsboro"}}  onClick={() => handleCategorySelect("High price")}>High price</li>
+                   
                     </ul>
                     <div className="arrival-collections">
                     {productList.map(product => <ShopCard key={Math.random()} data = {{

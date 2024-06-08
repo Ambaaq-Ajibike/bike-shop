@@ -48,10 +48,12 @@
     margin-bottom: 9px;
 }
 .landing-info{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
     padding: 48px;
     margin: 5pc 0;
+    gap: 25px;
 }
 .arrival-title{
     display: flex;
@@ -96,5 +98,27 @@
     }
     .landing-intro h1{
         font-size: 5pc;
+    }
+}
+@media screen and  (max-width: 1160px)  {
+    .landing-info{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and  (max-width: 850px)  {
+    .landing-info{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .arrival-collections{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .arrival-collections{
+        grid-template-columns: 1fr;
     }
 }

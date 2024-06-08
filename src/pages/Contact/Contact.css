@@ -1,6 +1,7 @@
 .contact-first{
-    display: flex;
+    display: grid;
     justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     /* align-items: center; */
     padding: 48px;
 }
@@ -74,10 +75,18 @@
     cursor: pointer;
 }
 @media screen and  (max-width: 850px)  {
-    .form-upper, .contact-first{
+    .form-upper{
         flex-direction: column;
+    }
+.contact-first{
+        grid-template-columns: 1fr;
     }
     .contact-first{
         gap: 3pc;
+    }
+}
+@media screen and  (max-width: 1160px)  {
+    .contact-first{
+        grid-template-columns: 1fr 1fr;
     }
 }
